@@ -1,5 +1,5 @@
 # WBA Finale Challenge 2017
-Studentisches Projekt welches im Rahmen der WBA1 Challenge 2017 der TH Köln am Campus entstanden ist.
+Studentisches Projekt welches im Rahmen der WBA1 Challenge 2017 der TH Köln am Campus Gummersbach entstanden ist.
 * [Challenge](https://th-koeln.github.io/mi-bachelor-wba1/challenge-2017/) - Informationen zur Challenge
  
 ## Contributors 
