@@ -7,23 +7,14 @@
     <!-- Die 3 Meta-Tags oben *müssen* zuerst im head stehen; jeglicher sonstiger head-Inhalt muss *nach* diesen Tags kommen -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
 
     <title>Vorstellung des Projektes WBA</title>
 
-    <!-- Bootstrap-CSS -->
-    <link href="../css_content/bootstrap_css/css/bootstrap-grid.css" rel="stylesheet">
-    <link href="../css_content/bootstrap_css/css/bootstrap-reboot.css" rel="stylesheet">
-    <link href="../css_content/bootstrap_css/css/bootstrap.css" rel="stylesheet">
-    <link href="../css_content/bootstrap_css/css/bootstrap-theme.css" rel="stylesheet">
-    <link href="../css_content/mainStyleGuide.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!-- Unterstützung für Media Queries und HTML5-Elemente in IE8 über HTML5 shim und Respond.js -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    <link rel="stylesheet" href="../css_content/mainStyleGuide.css">
 </head>
 <!-- NAVBAR
 ================================================== -->
@@ -70,6 +61,7 @@
 
 <!-- Karussell
 ================================================== -->
+<div class="container">
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Positionsanzeige -->
     <ol class="carousel-indicators">
@@ -77,48 +69,32 @@
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
     </ol>
-    <div class="carousel-inner" role="listbox">
+
+
+    <div class="carousel-inner">
         <div class="item active">
-            <img class="first-slide" src="../css_content/img/landscape1.jpg" alt="Erste Folie">
-            <div class="container">
-                <div class="carousel-caption">
-                    <h1>Beispiel-Überschrift.</h1>
-                    <p>Hinweis: Falls du diese Seite über eine <code>file://</code>-URL anzeigst, werden die Glyphicon-Buttons für das nächste und vorherige Objekt links und rechts unter Umständen aufgrund von Browser-Sicherheitsregeln nicht vernünftig geladen/angezeigt.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Melde dich noch heute an</a></p>
-                </div>
-            </div>
+            <img src="../css_content/img/landscape1.jpg" alt="Landscape1" style="width: 50%;">
         </div>
+
         <div class="item">
-            <img class="second-slide" src="../css_content/img/landscape2.jpg" alt="Zweite Folie">
-            <div class="container">
-                <div class="carousel-caption">
-                    <h1>Noch eine Beispiel-Überschrift.</h1>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Mehr erfahren</a></p>
-                </div>
-            </div>
+            <img src="../css_content/img/landscape2.jpg" alt="Landscape2" style="width: 50%;">
         </div>
+
         <div class="item">
-            <img class="third-slide" src="../css_content/img/skyline1.jpg" alt="Dritte Folie">
-            <div class="container">
-                <div class="carousel-caption">
-                    <h1>Aller guten Dinge sind drei.</h1>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Galerie erkunden</a></p>
-                </div>
-            </div>
+            <img src="../css_content/img/skyline2.jpg" alt="Skyline2" style="width: 50%;">
         </div>
     </div>
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Zurück</span>
+
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
     </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Weiter</span>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
     </a>
 </div><!-- /.carousel -->
-
+</div>
 
 <!-- Marketing-Botschaften und Präsentationsspalten
 ================================================== -->
