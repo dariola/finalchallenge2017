@@ -196,7 +196,7 @@ function picChange(whichone) {
     switch(whichone){
         case 1:
             var dropy = document.getElementById("drop1");
-            var rain = new Audio("../sounds/regen_ambient.mp3");
+            var rain = document.getElementById("dropM");
             if (dropy.getAttribute('src') == "../css_content/img/drop%20w.png")
             {
                 dropy.src = "../css_content/img/drop.png";
@@ -211,7 +211,7 @@ function picChange(whichone) {
 
         case 2:
             var thundry = document.getElementById("thunder1");
-            var thunder = new Audio("../sounds/storm_ambient.mp3");
+            var thunder = document.getElementById("thunderM");
             if (thundry.getAttribute('src') == "../css_content/img/thunder%20w.png")
             {
                 thundry.src = "../css_content/img/thunder.png";
@@ -226,7 +226,7 @@ function picChange(whichone) {
 
         case 3:
             var windy = document.getElementById("wind1");
-            var wind = new Audio("../sounds/wind_ambient.mp3");
+            var wind = document.getElementById("windM");
             if (windy.getAttribute('src') == "../css_content/img/wind%20w.png")
             {
                 windy.src = "../css_content/img/wind.png";
@@ -241,7 +241,7 @@ function picChange(whichone) {
 
         case 4:
             var wavy = document.getElementById("wave1");
-            var waves = new Audio("../sounds/ocean_ambient.mp3");
+            var waves = document.getElementById("waveM");
             if (wavy.getAttribute('src') == "../css_content/img/wave%20w.png")
             {
                 wavy.src = "../css_content/img/wave.png";
@@ -256,7 +256,7 @@ function picChange(whichone) {
 
         case 5:
             var firy = document.getElementById("fire1");
-            var fire = new Audio("../sounds/fire_ambient.mp3");
+            var fire = document.getElementById("fireM");
             if (firy.getAttribute('src') == "../css_content/img/fire%20w.png")
             {
                 firy.src = "../css_content/img/fire.png";
@@ -271,7 +271,7 @@ function picChange(whichone) {
 
         case 6:
             var birdy = document.getElementById("bird1");
-            var bird = new Audio("../sounds/birds_ambient.mp3");
+            var bird = document.getElementById("birdM");
             if (birdy.getAttribute('src') == "../css_content/img/bird%20w.png")
             {
                 birdy.src = "../css_content/img/bird.png";
@@ -286,7 +286,7 @@ function picChange(whichone) {
 
         case 7:
             var cricky = document.getElementById("cricket1");
-            var cricket = new Audio("../sounds/cricket_ambient.mp3");
+            var cricket = document.getElementById("cricketM");
             if (cricky.getAttribute('src') == "../css_content/img/cricket%20w.png")
             {
                 cricky.src = "../css_content/img/cricket.png";
@@ -301,7 +301,7 @@ function picChange(whichone) {
 
         case 8:
             var cofy = document.getElementById("coffee1");
-            var cof = new Audio("../sounds/storm_ambient.mp3");
+            var cof = document.getElementById("coffeeM");
             if (cofy.getAttribute('src') == "../css_content/img/coffee%20w.png")
             {
                 cofy.src = "../css_content/img/coffee.png";
