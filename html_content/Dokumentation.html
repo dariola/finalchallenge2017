@@ -148,10 +148,12 @@
 
     <div class="row featurette">
         <div id="schwierigkeiten" class="col-md-7 col-md-push-5">
-            <h2 class="featurette-heading">Oh ja, es ist SO gut. <span class="text-muted">Sieh es dir selbst an.</span>
+            <h2 class="featurette-heading">Dinge die Probleme verursachten.<span class="text-muted">Schwierigkeiten.</span>
             </h2>
             <p class="lead">Schwierigkeiten + geplante Implementierungen die nicht erreicht wurden:
-                Die Schwierigkeit am Start lagen im Karussell und der Soundimplementierung, grade im javascript Bereich. Geplant war diverse Javascript files die genutzt werden im späteren Verlauf ein wenig effizienter und optimaler zu referieren, allerdings war dies nicht mehr im temporären Rahmen des Möglichen..</p>
+                Die Schwierigkeit am Start lagen im Karussell und der Soundimplementierung, grade im javascript Bereich.
+                Geplant war diverse Javascript files die genutzt werden im späteren Verlauf ein wenig effizienter und optimaler zu referieren, allerdings war dies nicht mehr im temporären Rahmen des Möglichen.
+            </p>
         </div>
         <div class="col-md-5 col-md-pull-7">
             <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto"
@@ -163,8 +165,8 @@
 
     <div class="row featurette">
         <div id="frameworks" class="col-md-7">
-            <h2 class="featurette-heading">Und zum Schluss gibt es noch dies hier. <span
-                    class="text-muted">Schachmatt.</span></h2>
+            <h2 class="featurette-heading">Kleine Hilfen.<span
+                    class="text-muted">Frameworks.</span></h2>
             <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
                 semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
                 commodo.</p>
@@ -184,6 +186,22 @@
     </footer>
 
 </div><!-- /.container -->
+
+<script>
+    $('.to-top-btn').click( function() {
+        $('html, body').animate({scrollTop: '0'}, 600);
+    });
+
+    //Show on Scroll
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 400) {
+            $('.to-top-btn').addClass('showme');
+        } else {
+            $('.to-top-btn').removeClass('showme');
+        }
+    });
+</script>
+
 
 <a class="btn to-top-btn" href="#top">
     <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
