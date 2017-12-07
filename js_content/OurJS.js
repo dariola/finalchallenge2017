@@ -25,8 +25,24 @@ function playSound(whichone) {
             sound3.volume=1;
             sound3.play();
             break;
+        case 4:
+            sound4.volume=1;
+            sound4.play();
+            break;
+        case 5:
+            sound5.volume=1;
+            sound5.play();
+            break;
+        case 6:
+            sound6.volume=1;
+            sound6.play();
+            break;
+        case 7:
+            sound7.volume=1;
+            sound7.play();
+            break;
         default:
-            sound3.play();
+            sound8.play();
     }
 
 }
@@ -35,6 +51,12 @@ function stopSound(whichone) {
     var sound1 = document.getElementById('ambient_sounds1');
     var sound2 = document.getElementById('ambient_sounds2');
     var sound3 = document.getElementById('ambient_sounds3');
+    var sound4 = document.getElementById('ambient_sounds4');
+    var sound5 = document.getElementById('ambient_sounds5');
+    var sound6 = document.getElementById('ambient_sounds6');
+    var sound7 = document.getElementById('ambient_sounds7');
+    var sound8 = document.getElementById('ambient_sounds8');
+
 
     if (whichone === 1) {
             var slimFady = setInterval(function () {
@@ -83,6 +105,86 @@ function stopSound(whichone) {
 
         if (sound3.volume === 0) {
             sound3.pause();
+        }
+    }
+
+    else if (whichone === 4) {
+        var slimFady4 = setInterval(function () {
+            if (sound4.volume === 0) {
+                clearInterval(slimFady4);
+            }
+            if(sound4.volume>=0.1)
+                sound4.volume = sound4.volume - 0.05;
+            else
+                sound4.volume= 0;
+        }, 30);
+
+        if (sound4.volume === 0) {
+            sound4.pause();
+        }
+    }
+
+    else if (whichone === 5) {
+        var slimFady5 = setInterval(function () {
+            if (sound5.volume === 0) {
+                clearInterval(slimFady5);
+            }
+            if(sound5.volume>=0.1)
+                sound5.volume = sound5.volume - 0.05;
+            else
+                sound5.volume= 0;
+        }, 30);
+
+        if (sound5.volume === 0) {
+            sound5.pause();
+        }
+    }
+
+    else if (whichone === 6) {
+        var slimFady6 = setInterval(function () {
+            if (sound6.volume === 0) {
+                clearInterval(slimFady6);
+            }
+            if(sound6.volume>=0.1)
+                sound6.volume = sound6.volume - 0.05;
+            else
+                sound6.volume= 0;
+        }, 30);
+
+        if (sound6.volume === 0) {
+            sound6.pause();
+        }
+    }
+
+    else if (whichone === 7) {
+        var slimFady7 = setInterval(function () {
+            if (sound7.volume === 0) {
+                clearInterval(slimFady7);
+            }
+            if(sound7.volume>=0.1)
+                sound7.volume = sound7.volume - 0.05;
+            else
+                sound7.volume= 0;
+        }, 30);
+
+        if (sound7.volume === 0) {
+            sound7.pause();
+        }
+    }
+
+    else if (whichone === 8) {
+        var slimFady8 = setInterval(function () {
+            if (sound8.volume === 0) {
+                clearInterval(slimFady8);
+            }
+            if(sound8.volume>=0.1)
+                sound8.volume = sound8.volume - 0.05;
+            else
+                sound8.volume= 0;
+        }, 30);
+
+        if (sound8.volume === 0) {
+            sound8.pause();
         }
     }
 }
