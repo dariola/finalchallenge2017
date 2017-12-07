@@ -192,5 +192,104 @@ inputRange.addEventListener('input', function() {
 });
 
 function picChange(whichone) {
-    
+
+
+    switch(whichone){
+        case 1:
+            var dropy = document.getElementById("drop1");
+            if (dropy.getAttribute('src') == "../css_content/img/drop%20w.png")
+            {
+                dropy.src = "../css_content/img/drop.png";
+            }
+            else
+            {
+                dropy.src = "../css_content/img/drop%20w.png";
+            }
+            break;
+
+        case 2:
+            var thundry = document.getElementById("thunder1");
+            if (thundry.getAttribute('src') == "../css_content/img/thunder%20w.png")
+            {
+                thundry.src = "../css_content/img/thunder.png";
+            }
+            else
+            {
+                thundry.src = "../css_content/img/thunder%20w.png";
+            }
+            break;
+
+        case 3:
+            var windy = document.getElementById("wind1");
+            if (windy.getAttribute('src') == "../css_content/img/wind%20w.png")
+            {
+                windy.src = "../css_content/img/wind.png";
+            }
+            else
+            {
+                windy.src = "../css_content/img/wind%20w.png";
+            }
+            break;
+
+        case 4:
+            var wavy = document.getElementById("wave1");
+            if (wavy.getAttribute('src') == "../css_content/img/wave%20w.png")
+            {
+                wavy.src = "../css_content/img/wave.png";
+            }
+            else
+            {
+                wavy.src = "../css_content/img/wave%20w.png";
+            }
+            break;
+
+        case 5:
+            var firy = document.getElementById("fire1");
+            if (firy.getAttribute('src') == "../css_content/img/fire%20w.png")
+            {
+                firy.src = "../css_content/img/fire.png";
+            }
+            else
+            {
+                firy.src = "../css_content/img/fire%20w.png";
+            }
+            break;
+
+        case 6:
+            var birdy = document.getElementById("bird1");
+            if (birdy.getAttribute('src') == "../css_content/img/bird%20w.png")
+            {
+                birdy.src = "../css_content/img/bird.png";
+            }
+            else
+            {
+                birdy.src = "../css_content/img/bird%20w.png";
+            }
+            break;
+
+        case 7:
+            var cricky = document.getElementById("cricket1");
+            if (cricky.getAttribute('src') == "../css_content/img/cricket%20w.png")
+            {
+                cricky.src = "../css_content/img/cricket.png";
+            }
+            else
+            {
+                cricky.src = "../css_content/img/cricket%20w.png";
+            }
+            break;
+
+        case 8:
+            var cofy = document.getElementById("coffee1")
+            if (cofy.getAttribute('src') == "../css_content/img/coffee%20w.png")
+            {
+                cofy.src = "../css_content/img/coffee.png";
+            }
+            else
+            {
+                cofy.src = "../css_content/img/coffee%20w.png";
+            }
+            break;
+
+    }
 }
