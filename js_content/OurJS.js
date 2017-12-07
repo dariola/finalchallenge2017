@@ -6,6 +6,11 @@ function playSound(whichone) {
     var sound1 = document.getElementById('ambient_sounds1');
     var sound2 = document.getElementById('ambient_sounds2');
     var sound3 = document.getElementById('ambient_sounds3');
+    var sound4 = document.getElementById('ambient_sounds4');
+    var sound5 = document.getElementById('ambient_sounds5');
+    var sound6 = document.getElementById('ambient_sounds6');
+    var sound7 = document.getElementById('ambient_sounds7');
+    var sound8 = document.getElementById('ambient_sounds8');
 
     switch (whichone){
         case 1:
