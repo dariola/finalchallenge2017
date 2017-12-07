@@ -1,4 +1,6 @@
 
+
+
 //START OF SOUND OF VORSTELLUNGSSEITE
 
 function playSound(whichone) {
@@ -223,3 +225,17 @@ function picChange(whichone) {
 
     }
 }
+
+//TO TOP BTN
+$('.to-top-btn').click( function() {
+    $('html, body').animate({scrollTop: '0'}, 600);
+});
+
+//Show on Scroll
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 400) {
+        $('.to-top-btn').addClass('showme');
+    } else {
+        $('.to-top-btn').removeClass('showme');
+    }
+});
