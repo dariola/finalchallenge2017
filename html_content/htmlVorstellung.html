@@ -13,17 +13,16 @@
     <link rel="stylesheet" href="../css_content/bootstrap/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="../css_content/bootstrap/js/bootstrap.min.js"></script>
-
+    <script src="../js_content/OurJS.js"></script>
 
     <link rel="stylesheet" href="../css_content/mainStyleGuide.css">
 </head>
-<!-- NAVBAR
-================================================== -->
-<body>
-<div class="navbar-collapse">
-    <div class="container">
 
-        <nav class="navbar navbar-inverse navbar-static-top">
+<!--butz-->
+
+<body>
+<div id="top" class="navbar-collapse">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -32,7 +31,9 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">WBA Challenge 2017</a>
+                    <a class="navbar-brand">
+                        <img src="../css_content/img/LogoName.png" alt="Logo" style="height: 25px">
+                    </a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
@@ -51,27 +52,108 @@
 
 <!-- Karussell
 ================================================== -->
-<div class="container">
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
+<div class="container paddingTopBig">
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
     <!-- Positionsanzeige -->
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+        <li data-target="#myCarousel" data-slide-to="5"></li>
+        <li data-target="#myCarousel" data-slide-to="6"></li>
+        <li data-target="#myCarousel" data-slide-to="7"></li>
     </ol>
 
 
     <div class="carousel-inner">
+
         <div class="item active">
-            <img src="../css_content/img/landscape1.jpg" alt="Landscape1" style="width: 50%;">
+            <img src="../css_content/img/wavesPic.jpg" alt="Skyline1" style="width: 50%;" onmouseenter="playSound(1)" onmouseout="stopSound(1)">
+            <audio src="../sounds/ocean_ambient.mp3"  id="ambient_sounds1"></audio>
+            <div class="carousel-caption">
+                <h3>
+                    hover over the picture!
+                </h3>
+            </div>
         </div>
 
         <div class="item">
-            <img src="../css_content/img/landscape2.jpg" alt="Landscape2" style="width: 50%;">
+            <img src="../css_content/img/birdsPic.jpg" alt="Landscape6" style="width: 50%;" onmouseenter="playSound(6)" onmouseout="stopSound(6)" >
+            <audio src="../sounds/birds_outside_ambient.mp3" id="ambient_sounds6"></audio>
+            <div class="carousel-caption">
+                <h3>
+                    hover over the picture!
+                </h3>
+            </div>
         </div>
 
+
         <div class="item">
-            <img src="../css_content/img/skyline2.jpg" alt="Skyline2" style="width: 50%;">
+            <img src="../css_content/img/cricketsPic.jpg" alt="Landscape7" style="width: 50%;" onmouseenter="playSound(7)" onmouseout="stopSound(7)">
+            <audio src="../sounds/cricket_ambient.mp3" id="ambient_sounds7"></audio>
+            <div class="carousel-caption">
+                <h3>
+                    hover over the picture!
+                </h3>
+            </div>
+        </div>
+
+
+         <div class="item">
+             <img src="../css_content/img/rainPic.jpg" alt="Skyline2" style="width: 50%;" onmouseenter="playSound(2)" onmouseout="stopSound(2)">
+             <audio src="../sounds/regen_ambient.mp3"  id="ambient_sounds2"></audio>
+             <div class="carousel-caption">
+                 <h3>
+                     hover over the picture!
+                 </h3>
+             </div>
+         </div>
+
+
+         <div class="item">
+             <img src="../css_content/img/thunderPic.jpg" alt="Skyline3" style="width: 50%;" onmouseenter="playSound(3)" onmouseout="stopSound(3)">
+             <audio src="../sounds/storm_ambient.mp3"  id="ambient_sounds3"></audio>
+             <div class="carousel-caption">
+                 <h3>
+                     hover over the picture!
+                 </h3>
+             </div>
+         </div>
+
+
+         <div class="item">
+             <img src="../css_content/img/windPic.jpg" alt="Skyline4" style="width: 50%;" onmouseenter="playSound(4)" onmouseout="stopSound(4)">
+             <audio src="../sounds/wind_ambient.mp3"  id="ambient_sounds4"></audio>
+             <div class="carousel-caption">
+                 <h3>
+                     hover over the picture!
+                 </h3>
+             </div>
+         </div>
+
+
+         <div class="item ">
+             <img src="../css_content/img/firePic.jpg" alt="Landscape5" style="width: 50%;" onmouseenter="playSound(5)" onmouseout="stopSound(5)">
+             <audio src="../sounds/fire_ambient.mp3" id="ambient_sounds5"></audio>
+             <div class="carousel-caption">
+                 <h3>
+                     hover over the picture!
+                 </h3>
+             </div>
+         </div>
+
+
+       <div class="item">
+            <img src="../css_content/img/coffeePic.jpg" alt="Landscape8" style="width: 50%;" onmouseenter="playSound(8)" onmouseout="stopSound(8)">
+            <audio src="../sounds/office_sound.mp3" id="ambient_sounds8"></audio>
+            <div class="carousel-caption">
+                <h3>
+                    hover over the picture!
+                </h3>
+            </div>
         </div>
     </div>
 
@@ -92,40 +174,59 @@
 
 <div class="container marketing">
 
+
     <!-- Drei Spalten Text unter dem Karussell -->
-    <div class="row">
+  <!--  <div class="row">
         <div class="col-lg-4">
-            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generisches Platzhalter-Bild" width="140" height="140">
+            <img class="img-circle" src="../css_content/img/Beispielbild.jpg" alt="beispiel" width="140" height="140">
             <h2>Überschrift</h2>
             <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
             <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
+        </div>&lt;!&ndash; /.col-lg-4 &ndash;&gt;
         <div class="col-lg-4">
-            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generisches Platzhalter-Bild" width="140" height="140">
+            <img class="img-circle" src="../css_content/img/Beispielbild.jpg" alt="beispiel" width="140" height="140">
             <h2>Überschrift</h2>
             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
+        </div>&lt;!&ndash; /.col-lg-4 &ndash;&gt;
         <div class="col-lg-4">
-            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generisches Platzhalter-Bild" width="140" height="140">
+            <img class="img-circle" src="../css_content/img/Beispielbild.jpg" alt="beispiel" width="140" height="140">
             <h2>Überschrift</h2>
             <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
             <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
-
+        </div>&lt;!&ndash; /.col-lg-4 &ndash;&gt;
+    </div>&lt;!&ndash; /.row &ndash;&gt;
+-->
 
     <!-- Präsentationsspalten -->
+
+    <div class="container">
+
+
+        <!-- Einleitender Text -->
+
+        <div class="row featurette">
+            <div class="col-md-12">
+                <h1 class="featurette-heading">Vorstellung des Projekts.<span
+                        class="text-muted">Wir präsentieren <img class="featurette-image img-responsive center-block" src="../css_content/img/LogoName2.png" alt="beispiel" height="200px"></span></h1>
+                         <p class="lead">Team ambienT präsentiert das neue akkustische Abenteuer für unterwegs.
+                    Sorgen sie jetzt für die richtige Atmosphäre während der Autofahrt.
+                    <small class="text-muted">Ebenso simpel wie genial.</small>
+                </p>
+            </div>
+
+
+        </div>
 
     <hr class="featurette-divider">
 
     <div class="row featurette">
         <div class="col-md-7">
-            <h2 class="featurette-heading">Tolle Überschrift. <span class="text-muted">Es wird dir den Verstand rauben.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <h2 class="featurette-heading">Das Ziel von ambienT:<span class="text-muted">Ihre Autofahrt zum Sounderlebnis machen.</span></h2>
+            <p class="lead">Dabei basieren wir uns weniger auf ihren körperlichen Komfort, sondern beziehen uns mehr auf die physische Ebene indem wir ihnen ihre Wunschumgebung schaffen mithilfe von Sounds. </p>
         </div>
         <div class="col-md-5">
-            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generisches Platzhalter-Bild">
+            <img class="featurette-image img-responsive center-block" src="../css_content/img/teslasymbol.png" alt="beispiel">
         </div>
     </div>
 
@@ -133,11 +234,11 @@
 
     <div class="row featurette">
         <div class="col-md-7 col-md-push-5">
-            <h2 class="featurette-heading">Oh ja, es ist SO gut. <span class="text-muted">Sieh es dir selbst an.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <h2 class="featurette-heading">Ob Großstadt, Regenwald oder auch Strand.<span class="text-muted">Da sein wo man will.</span></h2>
+            <p class="lead">Wir bringen sie dahin wo sie wollen. Mithilfe von Surroundsound versuchen Wir Sie komplett von eigentlichen Hintergrundgeräuschen zu trennen und in ihre gewünschte Geräuschkulisse zu bringen.</p>
         </div>
         <div class="col-md-5 col-md-pull-7">
-            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generisches Platzhalter-Bild">
+            <img class="featurette-image img-responsive center-block" src="../css_content/img/areas.jpg" alt="beispiel">
         </div>
     </div>
 
@@ -145,11 +246,11 @@
 
     <div class="row featurette">
         <div class="col-md-7">
-            <h2 class="featurette-heading">Und zum Schluss gibt es noch dies hier. <span class="text-muted">Schachmatt.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <h2 class="featurette-heading">Sie steuern ihr Sounderlebnis.<span class="text-muted">Ganz einfach.</span></h2>
+            <p class="lead">Sie stellen völlig frei von allen Zwängen ihre eigene Lautstärke ein. Ob lautstark in der Downtown oder leiser sanfter Regenklang – Sie setzen ihre eigenen Soundvorstellungen mithilfe unserer einfachen Benutzeroberfläche direkt um. </p>
         </div>
         <div class="col-md-5">
-            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generisches Platzhalter-Bild">
+            <img class="featurette-image img-responsive center-block" src="../css_content/img/panel.jpg" alt="beispiel">
         </div>
     </div>
 
@@ -158,12 +259,28 @@
 
     <!-- FOOTER -->
     <footer>
-        <p class="pull-right"><a href="#">Zurück nach oben</a></p>
         <p>&copy; 2017 WBA1 TH Köln
     </footer>
 
 </div><!-- /.container -->
 
+    <script>
+        $('.to-top-btn').click( function() {
+            $('html, body').animate({scrollTop: '0'}, 600);
+        });
+
+        //Show on Scroll
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 400) {
+                $('.to-top-btn').addClass('showme');
+            } else {
+                $('.to-top-btn').removeClass('showme');
+            }
+        });
+    </script>
+<a class="btn to-top-btn" href="#top">
+    <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+</a>
 
 <!-- Bootstrap-JavaScript
 ================================================== -->
