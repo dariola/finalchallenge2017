@@ -13,11 +13,17 @@
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700" rel="stylesheet">
 
-    <!-- This stylesheet contains specific styles for displaying the map
-         on this page. Replace it with your own styles as described in the
-         documentation:
-         https://developers.google.com/maps/documentation/javascript/tutorial -->
-    <link rel="stylesheet" href="/maps/documentation/javascript/demos/demos.css">
+    <style>
+        #map {
+            height: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -35,13 +41,93 @@
                         function initMap() {
                             // Create a map object and specify the DOM element for display.
                             var map = new google.maps.Map(document.getElementById('map'), {
-                                center: {lat: -34.397, lng: 150.644},
-                                zoom: 8
+                                center: {lat: 51.0225842, lng: 7.5639131},
+                                zoom: 17,
+                                styles: [
+                                    {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+                                    {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+                                    {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+                                    {
+                                        featureType: 'administrative.locality',
+                                        elementType: 'labels.text.fill',
+                                        stylers: [{color: '#d59563'}]
+                                    },
+                                    {
+                                        featureType: 'poi',
+                                        elementType: 'labels.text.fill',
+                                        stylers: [{color: '#d59563'}]
+                                    },
+                                    {
+                                        featureType: 'poi.park',
+                                        elementType: 'geometry',
+                                        stylers: [{color: '#263c3f'}]
+                                    },
+                                    {
+                                        featureType: 'poi.park',
+                                        elementType: 'labels.text.fill',
+                                        stylers: [{color: '#6b9a76'}]
+                                    },
+                                    {
+                                        featureType: 'road',
+                                        elementType: 'geometry',
+                                        stylers: [{color: '#38414e'}]
+                                    },
+                                    {
+                                        featureType: 'road',
+                                        elementType: 'geometry.stroke',
+                                        stylers: [{color: '#212a37'}]
+                                    },
+                                    {
+                                        featureType: 'road',
+                                        elementType: 'labels.text.fill',
+                                        stylers: [{color: '#9ca5b3'}]
+                                    },
+                                    {
+                                        featureType: 'road.highway',
+                                        elementType: 'geometry',
+                                        stylers: [{color: '#746855'}]
+                                    },
+                                    {
+                                        featureType: 'road.highway',
+                                        elementType: 'geometry.stroke',
+                                        stylers: [{color: '#1f2835'}]
+                                    },
+                                    {
+                                        featureType: 'road.highway',
+                                        elementType: 'labels.text.fill',
+                                        stylers: [{color: '#f3d19c'}]
+                                    },
+                                    {
+                                        featureType: 'transit',
+                                        elementType: 'geometry',
+                                        stylers: [{color: '#2f3948'}]
+                                    },
+                                    {
+                                        featureType: 'transit.station',
+                                        elementType: 'labels.text.fill',
+                                        stylers: [{color: '#d59563'}]
+                                    },
+                                    {
+                                        featureType: 'water',
+                                        elementType: 'geometry',
+                                        stylers: [{color: '#17263c'}]
+                                    },
+                                    {
+                                        featureType: 'water',
+                                        elementType: 'labels.text.fill',
+                                        stylers: [{color: '#515c6d'}]
+                                    },
+                                    {
+                                        featureType: 'water',
+                                        elementType: 'labels.text.stroke',
+                                        stylers: [{color: '#17263c'}]
+                                    }
+                                ]
                             });
                         }
 
                     </script>
-                    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+                    <script src="https://maps.googleapis.com/maps/api/js?AIzaSyAGrQIt4tKa3bE0njqcL7zBGphfP47noUU=initMap"
                             async defer></script>
                 </div>
             </div>
