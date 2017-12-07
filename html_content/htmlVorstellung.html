@@ -59,37 +59,61 @@
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+        <li data-target="#myCarousel" data-slide-to="5"></li>
+        <li data-target="#myCarousel" data-slide-to="6"></li>
+        <li data-target="#myCarousel" data-slide-to="7"></li>
     </ol>
 
 
     <div class="carousel-inner">
+
+        <div class="item">
+            <img src="../css_content/img/wavesPic.jpg" alt="Skyline1" style="width: 50%;" onmouseenter="playSound(1)" onmouseout="stopSound(1)">
+            <audio src="../sounds/ocean_ambient.mp3"  id="ambient_sounds1"></audio>
+            <div class="carousel-caption">
+                <h3>
+                Hover over the Picture!
+                </h3>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="../css_content/img/rainPic.jpg" alt="Skyline2" style="width: 50%;" onmouseenter="playSound(2)" onmouseout="stopSound(2)">
+            <audio src="../regen_ambient.mp3"  id="ambient_sounds2"></audio>
+        </div>
+
+        <div class="item">
+            <img src="../css_content/img/thunderPic.jpg" alt="Skyline3" style="width: 50%;" onmouseenter="playSound(3)" onmouseout="stopSound(3)">
+            <audio src="../storm_ambient.mp3"  id="ambient_sounds3"></audio>
+        </div>
+
+        <div class="item">
+            <img src="../css_content/img/windPic.jpg" alt="Skyline4" style="width: 50%;" onmouseenter="playSound(4)" onmouseout="stopSound(4)">
+            <audio src="../sounds/wind_ambient.mp3"  id="ambient_sounds4"></audio>
+        </div>
+
         <div class="item active">
-            <audio src="../sounds/birds_outside_ambient.mp3" id="ambient_sounds1"></audio>
-            <img src="../css_content/img/birdsPic.jpg" alt="Landscape1" style="width: 50%;" onmouseenter="playSound(1)" onmouseout="stopSound(1)">
-            <div class="carousel-caption">
-                <h3>hover me!</h3>
-                <p>hover over the headpictures</p>
-            </div>
+            <img src="../css_content/img/firePic.jpg" alt="Landscape5" style="width: 50%;" onmouseenter="playSound(5)" onmouseout="stopSound(5)">
+            <audio src="../sounds/fire_ambient.mp3" id="ambient_sounds5"></audio>
         </div>
 
         <div class="item">
-            <img src="../css_content/img/cricketsPic.jpg" alt="Landscape2" style="width: 50%;" onmouseenter="playSound(2)" onmouseout="stopSound(2)" >
-            <audio src="../sounds/cricket_ambient.mp3" id="ambient_sounds2"></audio>
-            <div class="carousel-caption">
-                <h3>hover me!</h3>
-                <p>hover over the headpictures</p>
-            </div>
+            <img src="../css_content/img/birdsPic.jpg" alt="Landscape6" style="width: 50%;" onmouseenter="playSound(6)" onmouseout="stopSound(6)" >
+            <audio src="../sounds/birds_outside_ambient.mp3" id="ambient_sounds6"></audio>
         </div>
 
-
-        <div class="item">
-            <img src="../css_content/img/wavesPic.jpg" alt="Skyline2" style="width: 50%;" onmouseenter="playSound(3)" onmouseout="stopSound(3)">
-            <audio src="../sounds/ocean_ambient.mp3"  id="ambient_sounds3"></audio>
-            <div class="carousel-caption">
-                <h3>hover me!</h3>
-                <p>hover over the headpictures</p>
-            </div>
+        <div class="item active">
+            <img src="../css_content/img/cricketsPic.jpg" alt="Landscape7" style="width: 50%;" onmouseenter="playSound(7)" onmouseout="stopSound(7)">
+            <audio src="../sounds/cricket_ambient.mp3" id="ambient_sounds7"></audio>
         </div>
+
+        <div class="item active">
+            <img src="../css_content/img/coffeePic.jpg" alt="Landscape8" style="width: 50%;" onmouseenter="playSound(8)" onmouseout="stopSound(8)">
+            <audio src="../sounds/office_sound.mp3.mp3" id="ambient_sounds8"></audio>
+        </div>
+
     </div>
 
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -111,29 +135,46 @@
 
 
     <!-- Drei Spalten Text unter dem Karussell -->
-    <div class="row">
+  <!--  <div class="row">
         <div class="col-lg-4">
             <img class="img-circle" src="../css_content/img/Beispielbild.jpg" alt="beispiel" width="140" height="140">
             <h2>Überschrift</h2>
             <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
             <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
+        </div>&lt;!&ndash; /.col-lg-4 &ndash;&gt;
         <div class="col-lg-4">
             <img class="img-circle" src="../css_content/img/Beispielbild.jpg" alt="beispiel" width="140" height="140">
             <h2>Überschrift</h2>
             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
+        </div>&lt;!&ndash; /.col-lg-4 &ndash;&gt;
         <div class="col-lg-4">
             <img class="img-circle" src="../css_content/img/Beispielbild.jpg" alt="beispiel" width="140" height="140">
             <h2>Überschrift</h2>
             <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
             <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
-
+        </div>&lt;!&ndash; /.col-lg-4 &ndash;&gt;
+    </div>&lt;!&ndash; /.row &ndash;&gt;
+-->
 
     <!-- Präsentationsspalten -->
+
+    <div class="container">
+
+
+        <!-- Einleitender Text -->
+
+        <div class="row featurette">
+            <div class="col-md-12">
+                <h1 class="featurette-heading">Vorstellung des Projekts.<span
+                        class="text-muted">Wir präsentieren <img class="featurette-image img-responsive center-block" src="../css_content/img/LogoName2.png" alt="beispiel"></span></h1>
+                <p class="lead">Team ambienT präsentiert das neue akkustische Abenteuer für unterwegs.
+                    Sorgen sie jetzt für die richtige Atmosphäre während der Autofahrt. <small class="text-muted">Ebenso simpel wie genial.</small>
+                </p>
+            </div>
+
+
+        </div>
 
     <hr class="featurette-divider">
 
@@ -143,7 +184,7 @@
             <p class="lead">Dabei basieren wir uns weniger auf ihren körperlichen Komfort, sondern beziehen uns mehr auf die physische Ebene indem wir ihnen ihre Wunschumgebung schaffen mithilfe von Sounds. </p>
         </div>
         <div class="col-md-5">
-            <img class="featurette-image img-responsive center-block" src="../css_content/img/LogoName2.png" alt="beispiel">
+            <img class="featurette-image img-responsive center-block" src="../css_content/img/teslasymbol.png" alt="beispiel">
         </div>
     </div>
 
