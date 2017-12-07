@@ -1,4 +1,4 @@
-
+//Start of Doc
 //START OF SOUND OF VORSTELLUNGSSEITE
 
 function playSound(whichone) {
@@ -91,7 +91,7 @@ function stopSound(whichone) {
             sound2.pause();
         }
     }
-    else {
+    else if (whichone === 3){
             var slimFady3 = setInterval(function () {
                 if (sound3.volume === 0) {
                     clearInterval(slimFady3);
@@ -171,7 +171,7 @@ function stopSound(whichone) {
         }
     }
 
-    else if (whichone === 8) {
+    else {
         var slimFady8 = setInterval(function () {
             if (sound8.volume === 0) {
                 clearInterval(slimFady8);
@@ -242,7 +242,7 @@ function changeVol(howMuch, whichOne) {
             break;
 
         case 3:
-            mus3volume = howMuch/100;
+            mus3.volume = howMuch/100;
             if(pic3.getAttribute('src') !== "../css_content/img/wind%20w.png") {
                 if (pic3.style.opacity !== undefined) {
                     if (howMuch / 100 > 0.2)
