@@ -95,11 +95,11 @@ function stopAll() {
 //START OF RANGESLIDER:
 function changeVol(howMuch) {
     var mus = document.getElementById("dropM");
-    mus.volume = howMuch/10;
+    mus.volume = howMuch/100;
+    console.log(howMuch);
 }
 
 function picChange(whichone) {
-
     switch(whichone){
         case 1:
             var dropy = document.getElementById("drop1");
