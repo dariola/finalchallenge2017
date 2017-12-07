@@ -290,12 +290,13 @@ input[type=range]::-moz-range-thumb:active {
 --------------------------- */
 
 a{
-    color: lightgray;
+    color: deepskyblue;
 
 }
 
 a:hover {
-    color: orange;
+    color: teal;
+    text-decoration: none;
 }
 
 html {
@@ -304,12 +305,15 @@ html {
     scroll-behavior: smooth;
 }
 
+
+/* CUSTOMIZE TO TOP BTN
+-------------------------- */
 .to-top-btn {
     position: fixed;
     bottom: 10px;
     right: 10px;
     z-index: 999999;
-    background: gray;
+    background: deepskyblue;
     color: white;
     margin: 0;
     padding: 0;
@@ -329,7 +333,7 @@ html {
 }
 .to-top-btn:hover {
     color: white;
-    background: orange;
+    background: teal;
     cursor: pointer;
 }
 .to-top-btn.showme {
