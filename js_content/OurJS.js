@@ -65,7 +65,7 @@ function stopSound(whichone) {
                     console.log(slimFady);
                 }
                 if(sound1.volume>=0.1)
-                    sound1.volume = sound1.volume - 0.05;
+                    sound1.volume = sound1.volume - 0.09;
                 else
                     sound1.volume= 0;
             }, 30);
@@ -82,7 +82,7 @@ function stopSound(whichone) {
                     clearInterval(slimFady2);
                 }
                 if(sound2.volume>=0.1)
-                    sound2.volume = sound2.volume - 0.05;
+                    sound2.volume = sound2.volume - 0.09;
                 else
                     sound2.volume= 0;
             }, 30);
@@ -91,17 +91,16 @@ function stopSound(whichone) {
             sound2.pause();
         }
     }
-
-    else if (whichone === 3) {
-        var slimFady3 = setInterval(function () {
-            if (sound3.volume === 0) {
-                clearInterval(slimFady3);
-            }
-            if(sound3.volume>=0.1)
-                sound3.volume = sound3.volume - 0.05;
-            else
-                sound3.volume= 0;
-        }, 30);
+    else {
+            var slimFady3 = setInterval(function () {
+                if (sound3.volume === 0) {
+                    clearInterval(slimFady3);
+                }
+                if(sound3.volume>=0.1)
+                    sound3.volume = sound3.volume - 0.09;
+                else
+                    sound3.volume = 0;
+            }, 30);
 
         if (sound3.volume === 0) {
             sound3.pause();
@@ -201,110 +200,125 @@ function stopAll() {
 //END OF SOUNDS OF VORSTELLUNGSSEITE
 
 //START OF RANGESLIDER:
+function changeVol(howMuch, whichOne) {
+    var mus1 = document.getElementById("dropM");
+    var pic1 = document.getElementById("drop1");
+    var mus2 = document.getElementById("thunderM");
+    var pic2 = document.getElementById("thunder1");
+    var mus3 = document.getElementById("windM");
+    var pic3 = document.getElementById("wind1");
+    var mus4 = document.getElementById("waveM");
+    var pic4 = document.getElementById("wave1");
+    var mus5 = document.getElementById("fireM");
+    var pic5 = document.getElementById("fire1");
+    var mus6 = document.getElementById("birdM");
+    var pic6 = document.getElementById("bird1");
+    var mus7 = document.getElementById("cricketM");
+    var pic7 = document.getElementById("cricket1");
+    var mus8 = document.getElementById("coffeeM");
+    var pic8 = document.getElementById("coffee1");
 
-var inputRange = document.getElementsByClassName('range')[0],
-    maxValue = 1, // the higher the smoother when dragging
-    speed = 5,
-    currValue, rafID;
+    switch(whichOne){
+        case 1:
+            mus1.volume = howMuch/100;
+            if(pic1.getAttribute('src') !== "../css_content/img/drop%20w.png") {
+                if (pic1.style.opacity !== undefined) {
+                    if (howMuch / 100 > 0.2)
+                        pic1.style.opacity = howMuch / 100;
+                    console.log(pic1.style.opacity);
+                }
+            }
+            break;
 
-// set min/max value
-inputRange.min = 0;
-inputRange.max = maxValue;
+        case 2:
+            mus2.volume = howMuch/100;
+            if(pic2.getAttribute('src') !== "../css_content/img/thunder%20w.png") {
+                if (pic2.style.opacity !== undefined) {
+                    if (howMuch / 100 > 0.2)
+                        pic2.style.opacity = howMuch / 100;
+                    console.log(pic2.style.opacity);
+                }
+            }
+            break;
 
-// listen for unlock
-function unlockStartHandler() {
-    // clear raf if trying again
-    window.cancelAnimationFrame(rafID);
+        case 3:
+            mus3volume = howMuch/100;
+            if(pic3.getAttribute('src') !== "../css_content/img/wind%20w.png") {
+                if (pic3.style.opacity !== undefined) {
+                    if (howMuch / 100 > 0.2)
+                        pic3.style.opacity = howMuch / 100;
+                    console.log(pic3.style.opacity);
+                }
+            }
+            break;
+        case 4:
+            mus4.volume = howMuch/100;
+            if(pic4.getAttribute('src') !== "../css_content/img/wave%20w.png") {
+                if (pic4.style.opacity !== undefined) {
+                    if (howMuch / 100 > 0.2)
+                        pic4.style.opacity = howMuch / 100;
+                    console.log(pic4.style.opacity);
+                }
+            }
+            break;
+        case 5:
+            mus5.volume = howMuch/100;
+            if(pic5.getAttribute('src') !== "../css_content/img/fire%20w.png") {
+                if (pic5.style.opacity !== undefined) {
+                    if (howMuch / 100 > 0.2)
+                        pic5.style.opacity = howMuch / 100;
+                    console.log(pic5.style.opacity);
+                }
+            }
+            break;
 
-    // set to desired value
-    currValue = +this.value;
+
+        case 6:
+            mus6.volume = howMuch/100;
+            if(pic6.getAttribute('src') !== "../css_content/img/bird%20w.png") {
+                if (pic6.style.opacity !== undefined) {
+                    if (howMuch / 100 > 0.2)
+                        pic6.style.opacity = howMuch / 100;
+                    console.log(pic6.style.opacity);
+                }
+            }
+            break;
+
+        case 7:
+            mus7.volume = howMuch/100;
+            if(pic7.getAttribute('src') !== "../css_content/img/cricket%20w.png") {
+                if (pic7.style.opacity !== undefined) {
+                    if (howMuch / 100 > 0.2)
+                        pic7.style.opacity = howMuch / 100;
+                    console.log(pic.style.opacity);
+                }
+            }
+            break;
+
+        case 8:
+            mus8.volume = howMuch/100;
+            if(pic8.getAttribute('src') !== "../css_content/img/coffee%20w.png") {
+                if (pic8.style.opacity !== undefined) {
+                    if (howMuch / 100 > 0.2)
+                        pic8.style.opacity = howMuch / 100;
+                    console.log(pic8.style.opacity);
+                }
+            }
+            break;
+    }
+
+
 }
-
-function unlockEndHandler() {
-
-    // store current value
-    currValue = +this.value;
-
-    // determine if we have reached success or not
-    if(currValue >= maxValue) {
-        successHandler();
-    }
-    else {
-        rafID = window.requestAnimationFrame(animateHandler);
-    }
-}
-
-// handle range animation
-function animateHandler() {
-
-    // calculate gradient transition
-    var transX = currValue - maxValue;
-
-    // update input range
-    inputRange.value = currValue;
-
-    //Change slide thumb color on mouse up
-    if (currValue < 20) {
-        inputRange.classList.remove('ltpurple');
-    }
-    if (currValue < 40) {
-        inputRange.classList.remove('purple');
-    }
-    if (currValue < 60) {
-        inputRange.classList.remove('pink');
-    }
-
-    // determine if we need to continue
-    if(currValue > -1) {
-        window.requestAnimationFrame(animateHandler);
-    }
-
-    // decrement value
-    currValue = currValue - speed;
-}
-
-// handle successful unlock
-function successHandler() {
-    alert('Unlocked');
-}
-
-// bind events
-inputRange.addEventListener('mousedown', unlockStartHandler, false);
-inputRange.addEventListener('mousestart', unlockStartHandler, false);
-inputRange.addEventListener('mouseup', unlockEndHandler, false);
-inputRange.addEventListener('touchend', unlockEndHandler, false);
-
-// move gradient
-inputRange.addEventListener('input', function() {
-    //Change slide thumb color on way up
-    if (this.value > 20) {
-        inputRange.classList.add('ltpurple');
-    }
-    if (this.value > 40) {
-        inputRange.classList.add('purple');
-    }
-    if (this.value > 60) {
-        inputRange.classList.add('pink');
-    }
-
-    //Change slide thumb color on way down
-    if (this.value < 20) {
-        inputRange.classList.remove('ltpurple');
-    }
-    if (this.value < 40) {
-        inputRange.classList.remove('purple');
-    }
-    if (this.value < 60) {
-        inputRange.classList.remove('pink');
-    }
-});
 
 function picChange(whichone) {
+
+    var array1 = document.querySelectorAll('[class="range blue"]');
 
     switch(whichone){
         case 1:
             var dropy = document.getElementById("drop1");
             var rain = document.getElementById("dropM");
+            rain.volume = array1[0].getAttribute('value')/-100;
             if (dropy.getAttribute('src') == "../css_content/img/drop%20w.png")
             {
                 dropy.src = "../css_content/img/drop.png";
@@ -313,6 +327,7 @@ function picChange(whichone) {
             else
             {
                 dropy.src = "../css_content/img/drop%20w.png";
+                dropy.style.opacity = 1;
                 rain.pause();
             }
             break;
@@ -320,6 +335,7 @@ function picChange(whichone) {
         case 2:
             var thundry = document.getElementById("thunder1");
             var thunder = document.getElementById("thunderM");
+            thunder.volume = array1[1].getAttribute('value')/100;
             if (thundry.getAttribute('src') == "../css_content/img/thunder%20w.png")
             {
                 thundry.src = "../css_content/img/thunder.png";
@@ -335,6 +351,7 @@ function picChange(whichone) {
         case 3:
             var windy = document.getElementById("wind1");
             var wind = document.getElementById("windM");
+            wind.volume = array1[1].getAttribute('value')/100;
             if (windy.getAttribute('src') == "../css_content/img/wind%20w.png")
             {
                 windy.src = "../css_content/img/wind.png";
@@ -350,6 +367,7 @@ function picChange(whichone) {
         case 4:
             var wavy = document.getElementById("wave1");
             var waves = document.getElementById("waveM");
+            waves.volume = array1[1].getAttribute('value')/100;
             if (wavy.getAttribute('src') == "../css_content/img/wave%20w.png")
             {
                 wavy.src = "../css_content/img/wave.png";
@@ -365,6 +383,7 @@ function picChange(whichone) {
         case 5:
             var firy = document.getElementById("fire1");
             var fire = document.getElementById("fireM");
+            fire.volume = array1[1].getAttribute('value')/100;
             if (firy.getAttribute('src') == "../css_content/img/fire%20w.png")
             {
                 firy.src = "../css_content/img/fire.png";
@@ -380,6 +399,7 @@ function picChange(whichone) {
         case 6:
             var birdy = document.getElementById("bird1");
             var bird = document.getElementById("birdM");
+            bird.volume = array1[1].getAttribute('value')/100;
             if (birdy.getAttribute('src') == "../css_content/img/bird%20w.png")
             {
                 birdy.src = "../css_content/img/bird.png";
@@ -395,6 +415,7 @@ function picChange(whichone) {
         case 7:
             var cricky = document.getElementById("cricket1");
             var cricket = document.getElementById("cricketM");
+            cricket.volume = array1[1].getAttribute('value')/100;
             if (cricky.getAttribute('src') == "../css_content/img/cricket%20w.png")
             {
                 cricky.src = "../css_content/img/cricket.png";
@@ -410,6 +431,7 @@ function picChange(whichone) {
         case 8:
             var cofy = document.getElementById("coffee1");
             var cof = document.getElementById("coffeeM");
+            cof.volume = array1[1].getAttribute('value')/100;
             if (cofy.getAttribute('src') == "../css_content/img/coffee%20w.png")
             {
                 cofy.src = "../css_content/img/coffee.png";
