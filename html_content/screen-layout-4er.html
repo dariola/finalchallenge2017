@@ -59,7 +59,7 @@
             </div>
             <div class="upper-content__right" data-trigger="fullscreen">
                 <div class="screen__content tsl-fixed" draggable="true" data-trigger="fullscreenChild">
-                    <div id="map"></div>
+                    <!--<div id="map"></div>
                     <script>
                         function initMap() {
                             // Create a map object and specify the DOM element for display.
@@ -151,7 +151,7 @@
 
                     </script>
                     <script src="https://maps.googleapis.com/maps/api/js?AIzaSyAGrQIt4tKa3bE0njqcL7zBGphfP47noUU=initMap"
-                            async defer></script>
+                            async defer></script>-->
                 </div>
             </div>
         </div>
@@ -161,13 +161,23 @@
     </section>
 
     <div id="sectionBottom" class="screen__bottom-area">
-
-        <!-- Section: unten
-            ##########################################################################-->
         <section id="section1" class="bottom-area__item">
-            <div class="container paddingTopBig">
+            <div class="container">
+                <div class="row paddingTopSmall">
+                    <div class="col-xs-4 col-md-4">
+
+                    </div>
+                    <div class="col-xs-4 col-md-4">
+                        <img src="../css_content/img/LogoName.png" alt="">
+                    </div>
+                    <div class="col-xs-4 col-md-4"></div>
+                </div>
+            </div>
+            <div class="container paddingTopMedium">
                 <div class="row">
                     <div class="col-xs-4 col-md-4">
+                        <h4>Master Volume</h4>
+                        <input type="range" min="-100" max="0" value="-50" class="range blue"/>
                     </div>
                     <div class="col-xs-4 col-md-4 text-center">
                         <img class="imgreset" src="../css_content/img/play-button.png" height="60">
