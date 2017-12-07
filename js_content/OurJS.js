@@ -1,6 +1,3 @@
-
-//START OF SOUND OF VORSTELLUNGSSEITE
-
 function playSound(whichone) {
 
     var sound1 = document.getElementById('ambient_sounds1');
@@ -51,7 +48,7 @@ function stopSound(whichone) {
     }
     else if (whichone === 2) {
             var slimFady2 = setInterval(function () {
-                if (sound2.volume === 0) {
+                if (!sound2.volume === 0) {
                     clearInterval(slimFady2);
                 }
                 if(sound2.volume>=0.1)
@@ -60,13 +57,13 @@ function stopSound(whichone) {
                     sound2.volume= 0;
             }, 30);
 
-        if (sound2.volume === 0) {
+        if (!sound2.volume === 0) {
             sound2.pause();
         }
     }
     else {
             var slimFady3 = setInterval(function () {
-                if (sound3.volume === 0) {
+                if (!sound3.volume > 0) {
                     clearInterval(slimFady3);
                 }
                 if(sound3.volume>=0.1)
@@ -75,7 +72,7 @@ function stopSound(whichone) {
                     sound3.volume = 0;
             }, 30);
 
-        if (sound3.volume === 0) {
+        if (!sound3.volume === 0) {
             sound3.pause();
         }
     }
@@ -90,12 +87,9 @@ function stopAll() {
 
 }
 
-//END OF SOUNDS OF VORSTELLUNGSSEITE
-
-//START OF RANGESLIDER:
 
 var inputRange = document.getElementsByClassName('range')[0],
-    maxValue = 1, // the higher the smoother when dragging
+    maxValue = 100, // the higher the smoother when dragging
     speed = 5,
     currValue, rafID;
 
@@ -158,7 +152,7 @@ function animateHandler() {
 // handle successful unlock
 function successHandler() {
     alert('Unlocked');
-}
+};
 
 // bind events
 inputRange.addEventListener('mousedown', unlockStartHandler, false);
@@ -191,6 +185,3 @@ inputRange.addEventListener('input', function() {
     }
 });
 
-function picChange(whichone) {
-    
-}
