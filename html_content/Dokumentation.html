@@ -185,6 +185,20 @@
 
 </div><!-- /.container -->
 
+<script>
+    $('.to-top-btn').click( function() {
+        $('html, body').animate({scrollTop: '0'}, 600);
+    });
+
+    //Show on Scroll
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 400) {
+            $('.to-top-btn').addClass('showme');
+        } else {
+            $('.to-top-btn').removeClass('showme');
+        }
+    });
+</script>
 <a class="btn to-top-btn" href="#top">
     <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
 </a>
