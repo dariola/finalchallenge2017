@@ -145,3 +145,8 @@ body {
     display: -webkit-flex;
     flex-wrap: wrap;
 }
+
+.paddingBig{
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
