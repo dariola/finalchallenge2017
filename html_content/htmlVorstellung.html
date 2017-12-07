@@ -17,8 +17,8 @@
 
     <link rel="stylesheet" href="../css_content/mainStyleGuide.css">
 </head>
-<!-- NAVBAR
-================================================== -->
+
+
 <body>
 <div class="navbar-collapse">
     <div class="container">
@@ -55,7 +55,7 @@
 ================================================== -->
 <div class="container">
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel" >
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
     <!-- Positionsanzeige -->
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -64,7 +64,7 @@
     </ol>
 
 
-    <div class="carousel-inner"">
+    <div class="carousel-inner">
         <div class="item active">
             <audio src="../sounds/birds_outside_ambient.mp3" id="ambient_sounds1"></audio>
             <img src="../css_content/img/landscape1.jpg" alt="Landscape1" style="width: 50%;" onmouseenter="playSound(1)" onmouseout="stopSound(1)">
