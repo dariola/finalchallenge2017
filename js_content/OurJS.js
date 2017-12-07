@@ -424,3 +424,14 @@ function picChange(whichone) {
 
     }
 }
+
+function ButtonSwap() {
+    var garbage = document.getElementById("garbage");
+    if (garbage.getAttribute('src') == "../css_content/img/garbage.png") {
+        garbage.src = "../css_content/img/return.png";
+
+    }
+    else {
+        garbage.src = "../css_content/img/garbage.png";
+    }
+}
