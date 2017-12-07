@@ -6821,7 +6821,7 @@ h2 {
   z-index: 10;
   background-color: #1a1a1a;
   display: grid;
-  grid-template-columns: 1fr 1fr; }
+  grid-template-columns: 1fr; }
 
 .bottom-area__item {
   border: solid 1px #222;

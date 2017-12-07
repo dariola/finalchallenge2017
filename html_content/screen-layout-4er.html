@@ -12,61 +12,88 @@
 
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700" rel="stylesheet">
+
+    <!-- This stylesheet contains specific styles for displaying the map
+         on this page. Replace it with your own styles as described in the
+         documentation:
+         https://developers.google.com/maps/documentation/javascript/tutorial -->
+    <link rel="stylesheet" href="/maps/documentation/javascript/demos/demos.css">
 </head>
 
 <body>
-    <main class="screen" id="screen">
+<main class="screen" id="screen">
 
-        <section class="screen__top-area">
-            <div class="top-area__upper-content">
-                <div id="sidebar" class="upper-content__left" data-trigger="fullscreenTarget">
-                    <img src="../css_content/img/tsl/tsl-sidebar-tr.svg" alt="sidebar" id="tsl-sidebar">
-                </div>
-                <div class="upper-content__right" data-trigger="fullscreen">
-                    <div class="screen__content tsl-fixed" draggable="true" data-trigger="fullscreenChild">
-                        <div class="tsl-map" style="background-image: url(../css_content/img/tsl/tsl-map.svg);"></div>
-                    </div>
+    <section class="screen__top-area">
+        <div class="top-area__upper-content">
+            <div id="sidebar" class="upper-content__left" data-trigger="fullscreenTarget">
+                <img src="../css_content/img/tsl/tsl-sidebar-tr.svg" alt="sidebar" id="tsl-sidebar">
+            </div>
+            <div class="upper-content__right" data-trigger="fullscreen">
+                <div class="screen__content tsl-fixed" draggable="true" data-trigger="fullscreenChild">
+                    <div id="map"></div>
+                    <script>
+                        function initMap() {
+                            // Create a map object and specify the DOM element for display.
+                            var map = new google.maps.Map(document.getElementById('map'), {
+                                center: {lat: -34.397, lng: 150.644},
+                                zoom: 8
+                            });
+                        }
+
+                    </script>
+                    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+                            async defer></script>
                 </div>
             </div>
-            <div class="top-area__main-control">
-                <img src="../css_content/img/tsl/tsl-main-control-bar.svg" alt="control-bar" id="tsl-main-control-bar">
+        </div>
+        <div class="top-area__main-control">
+            <img src="../css_content/img/tsl/tsl-main-control-bar.svg" alt="control-bar" id="tsl-main-control-bar">
+        </div>
+    </section>
+
+    <div id="sectionBottom" class="screen__bottom-area">
+
+        <!-- Section 1: oben links
+            ##########################################################################-->
+        <section id="section1" class="bottom-area__item">
+            <div class="screen__content" draggable="true">
+                <!-- Put your Content here ###########################################-->
+
+                <h4>Super Content Area 1</h4>
+                <p>Listen to your favourite tunes mois.</p>
+                <button class="btn">Start Tour</button>
+
+                <!-- End of content box 4 ############################################-->
             </div>
         </section>
+    </div>
+</main>
 
-        <div id="sectionBottom" class="screen__bottom-area">
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
-            <!-- Section 1: oben links
-				##########################################################################-->
-            <section id="section1" class="bottom-area__item">
-                <div class="screen__content" draggable="true">
-                    <!-- Put your Content here ###########################################-->
+<!-- Drag & Drop zwischen den Screens -->
+<script src="scripts/tesla-dnd.js"></script>
 
-                    <h4>Super Content Area 1</h4>
-                    <p>Listen to your favourite tunes mois.</p>
-                    <button class="btn">Start Tour</button>
+<!-- Volle Breite für die Karte -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zingtouch/1.0.5/zingtouch.min.js"></script>
+<script src="scripts/tesla-fs-map.js"></script>
 
-                    <!-- End of content box 4 ############################################-->
-                </div>
-            </section>
-        </div>
-    </main>
+<!-- Verschiedene Layouts via Query String -->
+<script src="scripts/tesla-layout-switch.js"></script>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-
-    <!-- Drag & Drop zwischen den Screens -->
-    <script src="scripts/tesla-dnd.js"></script>
-
-    <!-- Volle Breite für die Karte -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/zingtouch/1.0.5/zingtouch.min.js"></script>
-    <script src="scripts/tesla-fs-map.js"></script>
-
-    <!-- Verschiedene Layouts via Query String -->
-    <script src="scripts/tesla-layout-switch.js"></script>
-
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbgMCVFuIK9EdLUYOUYURk2QLU6Zm5i50&callback=initMap" async
+        defer></script>
 
 </body>
+</html>
