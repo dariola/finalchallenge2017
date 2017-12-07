@@ -151,6 +151,11 @@ body {
     padding-bottom: 30px;
 }
 
+.paddingTopBig {
+    padding-top: 80px;
+    padding-bottom: 0px;
+}
+
 a{
     color: lightgray;
 
