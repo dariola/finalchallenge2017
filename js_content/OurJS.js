@@ -1,6 +1,4 @@
 
-
-
 //START OF SOUND OF VORSTELLUNGSSEITE
 
 function playSound(whichone) {
@@ -40,7 +38,7 @@ function stopSound(whichone) {
                     console.log(slimFady);
                 }
                 if(sound1.volume>=0.1)
-                    sound1.volume = sound1.volume - 0.09;
+                    sound1.volume = sound1.volume - 0.05;
                 else
                     sound1.volume= 0;
             }, 30);
@@ -57,7 +55,7 @@ function stopSound(whichone) {
                     clearInterval(slimFady2);
                 }
                 if(sound2.volume>=0.1)
-                    sound2.volume = sound2.volume - 0.09;
+                    sound2.volume = sound2.volume - 0.05;
                 else
                     sound2.volume= 0;
             }, 30);
@@ -66,16 +64,17 @@ function stopSound(whichone) {
             sound2.pause();
         }
     }
-    else {
-            var slimFady3 = setInterval(function () {
-                if (sound3.volume === 0) {
-                    clearInterval(slimFady3);
-                }
-                if(sound3.volume>=0.1)
-                    sound3.volume = sound3.volume - 0.09;
-                else
-                    sound3.volume = 0;
-            }, 30);
+
+    else if (whichone === 3) {
+        var slimFady3 = setInterval(function () {
+            if (sound3.volume === 0) {
+                clearInterval(slimFady3);
+            }
+            if(sound3.volume>=0.1)
+                sound3.volume = sound3.volume - 0.05;
+            else
+                sound3.volume= 0;
+        }, 30);
 
         if (sound3.volume === 0) {
             sound3.pause();
@@ -95,13 +94,106 @@ function stopAll() {
 //END OF SOUNDS OF VORSTELLUNGSSEITE
 
 //START OF RANGESLIDER:
-function changeVol(howMuch) {
-    var mus = document.getElementById("dropM");
-    mus.volume = howMuch/100;
-    console.log(howMuch);
+
+var inputRange = document.getElementsByClassName('range')[0],
+    maxValue = 1, // the higher the smoother when dragging
+    speed = 5,
+    currValue, rafID;
+
+// set min/max value
+inputRange.min = 0;
+inputRange.max = maxValue;
+
+// listen for unlock
+function unlockStartHandler() {
+    // clear raf if trying again
+    window.cancelAnimationFrame(rafID);
+
+    // set to desired value
+    currValue = +this.value;
 }
 
+function unlockEndHandler() {
+
+    // store current value
+    currValue = +this.value;
+
+    // determine if we have reached success or not
+    if(currValue >= maxValue) {
+        successHandler();
+    }
+    else {
+        rafID = window.requestAnimationFrame(animateHandler);
+    }
+}
+
+// handle range animation
+function animateHandler() {
+
+    // calculate gradient transition
+    var transX = currValue - maxValue;
+
+    // update input range
+    inputRange.value = currValue;
+
+    //Change slide thumb color on mouse up
+    if (currValue < 20) {
+        inputRange.classList.remove('ltpurple');
+    }
+    if (currValue < 40) {
+        inputRange.classList.remove('purple');
+    }
+    if (currValue < 60) {
+        inputRange.classList.remove('pink');
+    }
+
+    // determine if we need to continue
+    if(currValue > -1) {
+        window.requestAnimationFrame(animateHandler);
+    }
+
+    // decrement value
+    currValue = currValue - speed;
+}
+
+// handle successful unlock
+function successHandler() {
+    alert('Unlocked');
+}
+
+// bind events
+inputRange.addEventListener('mousedown', unlockStartHandler, false);
+inputRange.addEventListener('mousestart', unlockStartHandler, false);
+inputRange.addEventListener('mouseup', unlockEndHandler, false);
+inputRange.addEventListener('touchend', unlockEndHandler, false);
+
+// move gradient
+inputRange.addEventListener('input', function() {
+    //Change slide thumb color on way up
+    if (this.value > 20) {
+        inputRange.classList.add('ltpurple');
+    }
+    if (this.value > 40) {
+        inputRange.classList.add('purple');
+    }
+    if (this.value > 60) {
+        inputRange.classList.add('pink');
+    }
+
+    //Change slide thumb color on way down
+    if (this.value < 20) {
+        inputRange.classList.remove('ltpurple');
+    }
+    if (this.value < 40) {
+        inputRange.classList.remove('purple');
+    }
+    if (this.value < 60) {
+        inputRange.classList.remove('pink');
+    }
+});
+
 function picChange(whichone) {
+
     switch(whichone){
         case 1:
             var dropy = document.getElementById("drop1");
@@ -225,17 +317,3 @@ function picChange(whichone) {
 
     }
 }
-
-//TO TOP BTN
-$('.to-top-btn').click( function() {
-    $('html, body').animate({scrollTop: '0'}, 600);
-});
-
-//Show on Scroll
-$(window).scroll(function () {
-    if ($(this).scrollTop() > 400) {
-        $('.to-top-btn').addClass('showme');
-    } else {
-        $('.to-top-btn').removeClass('showme');
-    }
-});
