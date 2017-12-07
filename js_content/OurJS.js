@@ -200,6 +200,9 @@ function picChange(whichone) {
             if (dropy.getAttribute('src') == "../css_content/img/drop%20w.png")
             {
                 dropy.src = "../css_content/img/drop.png";
+                var fire = "../sounds/regen_ambient.mp3";
+                fire.play();
+                fire.volume=0.5;
             }
             else
             {
@@ -212,6 +215,7 @@ function picChange(whichone) {
             if (thundry.getAttribute('src') == "../css_content/img/thunder%20w.png")
             {
                 thundry.src = "../css_content/img/thunder.png";
+                activateGo(thundry);
             }
             else
             {
@@ -224,6 +228,7 @@ function picChange(whichone) {
             if (windy.getAttribute('src') == "../css_content/img/wind%20w.png")
             {
                 windy.src = "../css_content/img/wind.png";
+                activateGo(windy);
             }
             else
             {
@@ -236,6 +241,7 @@ function picChange(whichone) {
             if (wavy.getAttribute('src') == "../css_content/img/wave%20w.png")
             {
                 wavy.src = "../css_content/img/wave.png";
+                activateGo(wavy);
             }
             else
             {
@@ -248,6 +254,7 @@ function picChange(whichone) {
             if (firy.getAttribute('src') == "../css_content/img/fire%20w.png")
             {
                 firy.src = "../css_content/img/fire.png";
+                activateGo(firy);
             }
             else
             {
@@ -260,6 +267,7 @@ function picChange(whichone) {
             if (birdy.getAttribute('src') == "../css_content/img/bird%20w.png")
             {
                 birdy.src = "../css_content/img/bird.png";
+                activateGo(birdy);
             }
             else
             {
@@ -272,6 +280,7 @@ function picChange(whichone) {
             if (cricky.getAttribute('src') == "../css_content/img/cricket%20w.png")
             {
                 cricky.src = "../css_content/img/cricket.png";
+                activateGo(cricky);
             }
             else
             {
@@ -284,6 +293,7 @@ function picChange(whichone) {
             if (cofy.getAttribute('src') == "../css_content/img/coffee%20w.png")
             {
                 cofy.src = "../css_content/img/coffee.png";
+                activateGo(cofy);
             }
             else
             {
@@ -291,5 +301,51 @@ function picChange(whichone) {
             }
             break;
 
+    }
+}
+
+function activateGo(pic){
+    var picpath = pic.getAttribute('src');
+    switch (picpath){
+        case "../css_content/img/drop%20w.png":
+            var drop = "../sounds/regen_ambient.mp3";
+            drop.play();
+            drop.volume=0.5;
+            break;
+        case "../css_content/img/thunder%20w.png":
+            var storm = "../sounds/storm_ambient.mp3";
+            storm.play();
+            storm.volume=0.5;
+            break;
+        case "../css_content/img/wind%20w.png":
+            var wind = "../sounds/wind_ambient.mp3";
+            wind.play();
+            wind.volume=0.5;
+            break;
+        case "../css_content/img/wave%20w.png":
+            var wave = "../sounds/ocean_ambient.mp3";
+            wave.play();
+            wave.volume=0.5;
+            break;
+        case "../css_content/img/fire%20w.png":
+            var fire = "../sounds/regen_ambient.mp3";
+            fire.play();
+            fire.volume=0.5;
+            break;
+        case "../css_content/img/bird%20w.png":
+            var bird = "../sounds/regen_ambient.mp3";
+            bird.play();
+            bird.volume=0.5;
+            break;
+        case "../css_content/img/cricket%20w.png":
+            var cricket = "../sounds/regen_ambient.mp3";
+            cricket.play();
+            cricket.volume=0.5;
+            break;
+        case "../css_content/img/coffee%20w.png":
+            var coffee = "../sounds/regen_ambient.mp3";
+            coffee.play();
+            coffee.volume=0.5;
+            break;
     }
 }
