@@ -93,10 +93,19 @@ function stopAll() {
 //END OF SOUNDS OF VORSTELLUNGSSEITE
 
 //START OF RANGESLIDER:
-function changeVol(howMuch) {
+function changeVol(howMuch, whichOne) {
     var mus = document.getElementById("dropM");
+    var pic = document.getElementById("drop1");
+
     mus.volume = howMuch/100;
-    console.log(howMuch);
+
+    if(pic.getAttribute('src') !== "../css_content/img/drop%20w.png") {
+        if (pic.style.opacity !== undefined) {
+            if (howMuch / 100 > 0.2)
+                pic.style.opacity = howMuch / 100;
+            console.log(pic.style.opacity);
+        }
+    }
 }
 
 function picChange(whichone) {
@@ -104,6 +113,7 @@ function picChange(whichone) {
         case 1:
             var dropy = document.getElementById("drop1");
             var rain = document.getElementById("dropM");
+            rain.volume = document.getElementsByClassName("rangeBlue")[0];
             if (dropy.getAttribute('src') == "../css_content/img/drop%20w.png")
             {
                 dropy.src = "../css_content/img/drop.png";
@@ -112,6 +122,7 @@ function picChange(whichone) {
             else
             {
                 dropy.src = "../css_content/img/drop%20w.png";
+                dropy.style.opacity= 1;
                 rain.pause();
             }
             break;
