@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <!DOCTYPE html>
-<html>
-<head>
-    <script>
-        function myFunction() {
-            alert("Dies ist ein WBA1 Projekt der TH Köln.");
-        }
-    </script>
-</head>
 
-<body onload="myFunction()">
-<h1>Hello World!</h1>
-</body>
+<style>#consolPopup {
+    display:none;
+    width:400px !important;
+    margin:0;
+    padding:0;
+}
 
-</html>
+</style>
+
+<script>$(document).ready(function () {
+    $("#consolPopup").fancybox({
+        'overlayShow': true
+    }).trigger('click');
+});</script>
+
+<p>Popup Test</p>
+<div id="consolPopup">
+    <h1>For Your Information</h1>
+
+    <p>Here is some text to fill out this space.</p>
+</div>
 
 
