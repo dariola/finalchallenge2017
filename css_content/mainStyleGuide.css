@@ -156,15 +156,6 @@ body {
     padding-bottom: 0px;
 }
 
-a{
-    color: lightgray;
-
-}
-
-a:hover {
-    color: orange;
-}
-
 body, html {
     /*background-color: #1d1c25;*/
     margin: 0;
@@ -283,4 +274,22 @@ input[type=range]::-webkit-slider-thumb:active {
 
 input[type=range]::-moz-range-thumb:active {
     cursor: -moz-grabbing;
+}
+
+/* CUSTOMIZE LINK / SCROLL
+--------------------------- */
+
+a{
+    color: lightgray;
+
+}
+
+a:hover {
+    color: orange;
+}
+
+html {
+    /* Bleeding-edge native smooth-scrolling
+    https://drafts.csswg.org/cssom-view/#smooth-scrolling */
+    scroll-behavior: smooth;
 }
