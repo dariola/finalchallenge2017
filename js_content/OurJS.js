@@ -193,159 +193,126 @@ inputRange.addEventListener('input', function() {
 
 function picChange(whichone) {
 
-
     switch(whichone){
         case 1:
             var dropy = document.getElementById("drop1");
+            var rain = document.getElementById("dropM");
             if (dropy.getAttribute('src') == "../css_content/img/drop%20w.png")
             {
                 dropy.src = "../css_content/img/drop.png";
-                var fire = "../sounds/regen_ambient.mp3";
-                fire.play();
-                fire.volume=0.5;
+                rain.play();
             }
             else
             {
                 dropy.src = "../css_content/img/drop%20w.png";
+                rain.pause();
             }
             break;
 
         case 2:
             var thundry = document.getElementById("thunder1");
+            var thunder = document.getElementById("thunderM");
             if (thundry.getAttribute('src') == "../css_content/img/thunder%20w.png")
             {
                 thundry.src = "../css_content/img/thunder.png";
-                activateGo(thundry);
+                thunder.play();
             }
             else
             {
                 thundry.src = "../css_content/img/thunder%20w.png";
+                thunder.pause();
             }
             break;
 
         case 3:
             var windy = document.getElementById("wind1");
+            var wind = document.getElementById("windM");
             if (windy.getAttribute('src') == "../css_content/img/wind%20w.png")
             {
                 windy.src = "../css_content/img/wind.png";
-                activateGo(windy);
+                wind.play();
             }
             else
             {
                 windy.src = "../css_content/img/wind%20w.png";
+                wind.pause();
             }
             break;
 
         case 4:
             var wavy = document.getElementById("wave1");
+            var waves = document.getElementById("waveM");
             if (wavy.getAttribute('src') == "../css_content/img/wave%20w.png")
             {
                 wavy.src = "../css_content/img/wave.png";
-                activateGo(wavy);
+                waves.play()
             }
             else
             {
                 wavy.src = "../css_content/img/wave%20w.png";
+                waves.pause();
             }
             break;
 
         case 5:
             var firy = document.getElementById("fire1");
+            var fire = document.getElementById("fireM");
             if (firy.getAttribute('src') == "../css_content/img/fire%20w.png")
             {
                 firy.src = "../css_content/img/fire.png";
-                activateGo(firy);
+                fire.play();
             }
             else
             {
                 firy.src = "../css_content/img/fire%20w.png";
+                fire.pause();
             }
             break;
 
         case 6:
             var birdy = document.getElementById("bird1");
+            var bird = document.getElementById("birdM");
             if (birdy.getAttribute('src') == "../css_content/img/bird%20w.png")
             {
                 birdy.src = "../css_content/img/bird.png";
-                activateGo(birdy);
+                bird.play();
             }
             else
             {
                 birdy.src = "../css_content/img/bird%20w.png";
+                bird.pause();
             }
             break;
 
         case 7:
             var cricky = document.getElementById("cricket1");
+            var cricket = document.getElementById("cricketM");
             if (cricky.getAttribute('src') == "../css_content/img/cricket%20w.png")
             {
                 cricky.src = "../css_content/img/cricket.png";
-                activateGo(cricky);
+                cricket.play();
             }
             else
             {
                 cricky.src = "../css_content/img/cricket%20w.png";
+                cricket.pause();
             }
             break;
 
         case 8:
-            var cofy = document.getElementById("coffee1")
+            var cofy = document.getElementById("coffee1");
+            var cof = document.getElementById("coffeeM");
             if (cofy.getAttribute('src') == "../css_content/img/coffee%20w.png")
             {
                 cofy.src = "../css_content/img/coffee.png";
-                activateGo(cofy);
+                cof.play();
             }
             else
             {
                 cofy.src = "../css_content/img/coffee%20w.png";
+                cof.pause();
             }
             break;
 
-    }
-}
-
-function activateGo(pic){
-    var picpath = pic.getAttribute('src');
-    switch (picpath){
-        case "../css_content/img/drop%20w.png":
-            var drop = "../sounds/regen_ambient.mp3";
-            drop.play();
-            drop.volume=0.5;
-            break;
-        case "../css_content/img/thunder%20w.png":
-            var storm = "../sounds/storm_ambient.mp3";
-            storm.play();
-            storm.volume=0.5;
-            break;
-        case "../css_content/img/wind%20w.png":
-            var wind = "../sounds/wind_ambient.mp3";
-            wind.play();
-            wind.volume=0.5;
-            break;
-        case "../css_content/img/wave%20w.png":
-            var wave = "../sounds/ocean_ambient.mp3";
-            wave.play();
-            wave.volume=0.5;
-            break;
-        case "../css_content/img/fire%20w.png":
-            var fire = "../sounds/regen_ambient.mp3";
-            fire.play();
-            fire.volume=0.5;
-            break;
-        case "../css_content/img/bird%20w.png":
-            var bird = "../sounds/regen_ambient.mp3";
-            bird.play();
-            bird.volume=0.5;
-            break;
-        case "../css_content/img/cricket%20w.png":
-            var cricket = "../sounds/regen_ambient.mp3";
-            cricket.play();
-            cricket.volume=0.5;
-            break;
-        case "../css_content/img/coffee%20w.png":
-            var coffee = "../sounds/regen_ambient.mp3";
-            coffee.play();
-            coffee.volume=0.5;
-            break;
     }
 }

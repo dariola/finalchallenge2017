@@ -146,6 +146,16 @@ body {
     flex-wrap: wrap;
 }
 
+.paddingTopSmall{
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+
+.paddingTopMedium {
+    padding-top: 40px;
+    padding-bottom: 0px;
+}
+
 .paddingBig{
     padding-top: 60px;
     padding-bottom: 30px;
