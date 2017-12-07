@@ -4,7 +4,7 @@ Studentisches Projekt welches im Rahmen der WBA1 Challenge 2017 der TH Köln am 
  
 ## Contributors 
 * **Svend Becker** - [Github](https://github.com/svendb96)
-* **Sören Albrecht** - [Github](https://github.com/salbrecht)
+* **Sören Albrecht** - [Github](https://github.com/soealbrecht)
 * **Bastian Schmalbach** - [Github](https://github.com/bschmalb)
 * **Dario Lazzara** - [Github](https://github.com/dariola)
 * **Lukas Munz** - [Github](https://github.com/lmunz)
