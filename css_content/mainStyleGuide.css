@@ -145,3 +145,14 @@ body {
     display: -webkit-flex;
     flex-wrap: wrap;
 }
+
+/* Links */
+
+a{
+    color: lightgray;
+
+}
+
+a:hover {
+    color: orange;
+}
