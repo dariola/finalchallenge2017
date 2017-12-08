@@ -6744,7 +6744,10 @@ h2 {
   display: grid;
   grid-template-rows: auto 1fr;
   background-color: #000;
-  align-content: stretch; }
+  align-content: stretch;
+  max-width: 1350px;
+  margin: auto;
+}
 
 .screen img {
   width: 100%; }
