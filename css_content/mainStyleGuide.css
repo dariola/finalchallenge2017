@@ -163,6 +163,11 @@ body {
     padding-bottom: 0px;
 }
 
+.paddingTopHuge {
+    padding-top: 130px;
+    padding-bottom: 0px;
+}
+
 body, html {
     /*background-color: #1d1c25;*/
     margin: 0;
