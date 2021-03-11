@@ -1,3 +1,4 @@
+Eine Prototype-Applikation, welche Hintergrundgeräusche für die Entspannung abspielt.  
 # WBA Finale Challenge 2017
 Studentisches Projekt welches im Rahmen der WBA1 Challenge 2017 der TH Köln am Campus Gummersbach entstanden ist.
 
