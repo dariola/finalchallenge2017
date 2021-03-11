@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Tesla Screen Demo</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <style>
+        #map {
+            height: 100%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css_content/generated/screen.css">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700" rel="stylesheet">
+
+    <!-- This stylesheet contains specific styles for displaying the map
+         on this page. Replace it with your own styles as described in the
+         documentation:
+         https://developers.google.com/maps/documentation/javascript/tutorial -->
+    <link rel="stylesheet" href="/maps/documentation/javascript/demos/demos.css">
+    <link rel="stylesheet" href="../css_content/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../css_content/bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="../css_content/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css_content/tesla-mockup-kit.css">
+    <link rel="stylesheet" href="../css_content/tesla.css">
+
+    <link rel="stylesheet" href="../css_content/mainStyleGuide.css">
+    <script src="../js_content/OurJS.js"></script>
+
+</head>
+
+<head>
+    <!--<script>
+        function myFunction() {
+            alert("Dies ist ein WBA1 Projekt der TH Köln.");
+        }
+    </script>-->
+</head>
+
+<body onload="myFunction()">
+<main class="screen" id="screen">
+    <section class="screen__top-area">
+        <div class="top-area__upper-content">
+            <div id="sidebar" class="upper-content__left" data-trigger="fullscreenTarget">
+                <img src="../css_content/img/tsl/tsl-sidebar-tr.svg" alt="sidebar" id="tsl-sidebar">
+            </div>
+            <div class="upper-content__right" data-trigger="fullscreen">
+                <div class="screen__content tsl-fixed" draggable="true" data-trigger="fullscreenChild">
+                    <div id="map"></div>
+                    <script>
+                        function initMap() {
+                            // Create a map object and specify the DOM element for display.
+                            var map = new google.maps.Map(document.getElementById('map'), {
+                                center: {lat: 51.0225842, lng: 7.5639131},
+                                zoom: 17,
+                                styles: [
+                                    {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+                                    {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+                                    {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+                                    {
+                                        featureType: 'administrative.locality',
+                                        elementType: 'labels.text.fill',
+                                        stylers: [{color: '#d59563'}]
+                                    },
+                                    {
+                                        featureType: 'poi',
+                                        elementType: 'labels.text.fill',
+                                        stylers: [{color: '#d59563'}]
+                                    },
+                                    {
+                                        featureType: 'poi.park',
+                                        elementType: 'geometry',
+                                        stylers: [{color: '#263c3f'}]
+                                    },
+                                    {
+                                        featureType: 'poi.park',
+                                        elementType: 'labels.text.fill',
+                                        stylers: [{color: '#6b9a76'}]
+                                    },
+                                    {
+                                        featureType: 'road',
+                                        elementType: 'geometry',
+                                        stylers: [{color: '#38414e'}]
+                                    },
+                                    {
+                                        featureType: 'road',
+                                        elementType: 'geometry.stroke',
+                                        stylers: [{color: '#212a37'}]
+                                    },
+                                    {
+                                        featureType: 'road',
+                                        elementType: 'labels.text.fill',
+                                        stylers: [{color: '#9ca5b3'}]
+                                    },
+                                    {
+                                        featureType: 'road.highway',
+                                        elementType: 'geometry',
+                                        stylers: [{color: '#746855'}]
+                                    },
+                                    {
+                                        featureType: 'road.highway',
+                                        elementType: 'geometry.stroke',
+                                        stylers: [{color: '#1f2835'}]
+                                    },
+                                    {
+                                        featureType: 'road.highway',
+                                        elementType: 'labels.text.fill',
+                                        stylers: [{color: '#f3d19c'}]
+                                    },
+                                    {
+                                        featureType: 'transit',
+                                        elementType: 'geometry',
+                                        stylers: [{color: '#2f3948'}]
+                                    },
+                                    {
+                                        featureType: 'transit.station',
+                                        elementType: 'labels.text.fill',
+                                        stylers: [{color: '#d59563'}]
+                                    },
+                                    {
+                                        featureType: 'water',
+                                        elementType: 'geometry',
+                                        stylers: [{color: '#17263c'}]
+                                    },
+                                    {
+                                        featureType: 'water',
+                                        elementType: 'labels.text.fill',
+                                        stylers: [{color: '#515c6d'}]
+                                    },
+                                    {
+                                        featureType: 'water',
+                                        elementType: 'labels.text.stroke',
+                                        stylers: [{color: '#17263c'}]
+                                    }
+                                ]
+                            });
+                        }
+
+                    </script>
+                    <script src="https://maps.googleapis.com/maps/api/js?AIzaSyAGrQIt4tKa3bE0njqcL7zBGphfP47noUU=initMap"
+                            async defer></script>
+                </div>
+            </div>
+        </div>
+        <div class="top-area__main-control">
+            <img src="../css_content/img/tsl/tsl-main-control-bar.svg" alt="control-bar" id="tsl-main-control-bar">
+        </div>
+    </section>
+
+    <div id="sectionBottom" class="screen__bottom-area">
+        <section id="section1" class="bottom-area__item" style="background-image: url('../css_content/img/coffeeBack.jpg')">
+            <div class="container">
+                <div class="row paddingTopHuge">
+                    <div class="col-xs-4 col-md-4">
+
+                    </div>
+                    <div class="col-xs-4 col-md-4">
+                        <img src="../css_content/img/LogoName.png" alt="">
+                    </div>
+                    <div class="col-xs-4 col-md-4"></div>
+                </div>
+            </div>
+            <div class="container paddingTopMedium">
+                <div class="row">
+                    <div class="col-xs-4 col-md-4 text-center">
+                        <h2>Master Volume</h2>
+                        <input type="range" min="-100" max="0" value="-50" class="range blue"/>
+                    </div>
+                    <div class="col-xs-4 col-md-4 text-center">
+                        <img class="imgreset" src="../css_content/img/play-button.png" height="60">
+                    </div>
+                    <div class="col-xs-4 col-md-4 text-center">
+                        <button class="buttonColored" onclick="ButtonSwap()">
+                            <img class="imgreset "src="../css_content/img/garbage.png" id="garbage" height="15" width="15">
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="container paddingTopMedium">
+                <div class="row">
+                    <div class="col-xs-3 col-md-3 text-center">
+                        <audio src="../sounds/regen_ambient.mp3" id="dropM" loop></audio>
+                        <img class="imgreset" src="../css_content/img/drop%20w.png" height="60" id="drop1" onclick="picChange(1)">
+                    </div>
+                    <div class="col-xs-3 col-md-3 text-center">
+                        <audio src="../sounds/storm_ambient.mp3" id="thunderM" loop></audio>
+                        <img class="imgreset" src="../css_content/img/thunder%20w.png" height="60" onclick="picChange(2)" id="thunder1">
+                    </div>
+                    <div class="col-xs-3 col-md-3 text-center">
+                        <audio src="../sounds/wind_ambient.mp3" id="windM" loop></audio>
+                        <img class="imgreset" src="../css_content/img/wind%20w.png" height="60" onclick="picChange(3)" id="wind1">
+                    </div>
+                    <div class="col-xs-3 col-md-3 text-center">
+                        <audio src="../sounds/ocean_ambient.mp3" id="waveM" loop></audio>
+                        <img class="imgreset" src="../css_content/img/wave%20w.png" height="60" onclick="picChange(4)" id="wave1">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-3 col-md-3 text-center">
+                        <input type="range" min="0" max="100" value="50" class="range blue" oninput="changeVol(value, 1)"/>
+                    </div>
+                    <div class="col-xs-3 col-md-3 text-center">
+                        <input type="range" min="0" max="100" value="50" class="range blue" oninput="changeVol(value, 2)"/>
+                    </div>
+                    <div class="col-xs-3 col-md-3 text-center">
+                        <input type="range" min="0" max="100" value="50" class="range blue" oninput="changeVol(value, 3)"/>
+                    </div>
+                    <div class="col-xs-3 col-md-3 text-center">
+                        <input type="range" min="0" max="100" value="50" class="range blue" oninput="changeVol(value, 4)"/>
+                    </div>
+                </div>
+            </div>
+            <!--butz-->
+            <div class="container paddingTopSmall">
+                <div class="row">
+                    <div class="col-xs-3 col-md-3 text-center">
+                        <audio src="../sounds/fire_ambient.mp3" id="fireM" loop></audio>
+                        <img class="imgreset" src="../css_content/img/fire%20w.png" height="60" onclick="picChange(5)" id="fire1">
+                    </div>
+                    <div class="col-xs-3 col-md-3 text-center">
+                        <audio src="../sounds/birds_outside_ambient.mp3" id="birdM" loop></audio>
+                        <img class="imgreset" src="../css_content/img/bird%20w.png" height="60" onclick="picChange(6)" id="bird1">
+                    </div>
+                    <div class="col-xs-3 col-md-3 text-center">
+                        <audio src="../sounds/cricket_ambient.mp3" id="cricketM" loop></audio>
+                        <img class="imgreset" src="../css_content/img/cricket%20w.png" height="60" onclick="picChange(7)" id="cricket1">
+                    </div>
+                    <div class="col-xs-3 col-md-3 text-center">
+                        <audio src="../sounds/office_sound.mp3" id="coffeeM" loop></audio>
+                        <img class="imgreset" src="../css_content/img/coffee%20w.png" height="60" onclick="picChange(8)" id="coffee1">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-3 col-md-3 text-center">
+                        <input type="range" min="0" max="100" value="50" class="range blue" oninput="changeVol(value, 5)"/>
+                    </div>
+                    <div class="col-xs-3 col-md-3 text-center">
+                        <input type="range" min="0" max="100" value="50" class="range blue" oninput="changeVol(value, 6)"/>
+                    </div>
+                    <div class="col-xs-3 col-md-3 text-center">
+                        <input type="range" min="0" max="100" value="50" class="range blue" oninput="changeVol(value, 7)"/>
+                    </div>
+                    <div class="col-xs-3 col-md-3 text-center">
+                        <input type="range" min="0" max="100" value="50" class="range blue" oninput="changeVol(value, 8)"/>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--</div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-circle" src="../css_content/img/Beispielbild_orange.jpg"
+                         alt="Generisches Platzhalter-Bild" width="140" height="140">
+                    <h2>Sound 1</h2>
+                    <p>short info</p>
+                    <p><a class="btn btn-default" href="#" role="button">play &raquo;</a></p>
+                </div>&lt;!&ndash; /.col-lg-4 &ndash;&gt;
+                <div class="col-lg-4">
+                    <img class="img-circle" src="../css_content/img/Beispielbild_orange.jpg"
+                         alt="Generisches Platzhalter-Bild" width="140" height="140">
+                    <h2>Sound 2</h2>
+                    <p>short info</p>
+                    <p><a class="btn btn-default" href="#" role="button">play &raquo;</a></p>
+                </div>&lt;!&ndash; /.col-lg-4 &ndash;&gt;
+                <div class="col-lg-4">
+                    <img class="img-circle" src="../css_content/img/Beispielbild_orange.jpg"
+                         alt="Generisches Platzhalter-Bild" width="140" height="140">
+                    <h2>Sound 3</h2>
+                    <p>short info</p>
+                    <p><a class="btn btn-default" href="#" role="button">play &raquo;</a></p>
+                </div>&lt;!&ndash; /.col-lg-4 &ndash;&gt;
+            </div>&lt;!&ndash; /.row &ndash;&gt;
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="img-circle" src="../css_content/img/Beispielbild_orange.jpg"
+                         alt="Generisches Platzhalter-Bild" width="140" height="140">
+                    <h2>Sound 1</h2>
+                    <p>short info</p>
+                    <p><a class="btn btn-default" href="#" role="button">play &raquo;</a></p>
+                </div>&lt;!&ndash; /.col-lg-4 &ndash;&gt;
+                <div class="col-lg-4">
+                    <img class="img-circle" src="../css_content/img/Beispielbild_orange.jpg"
+                         alt="Generisches Platzhalter-Bild" width="140" height="140">
+                    <h2>Sound 2</h2>
+                    <p>short info</p>
+                    <p><a class="btn btn-default" href="#" role="button">play &raquo;</a></p>
+                </div>&lt;!&ndash; /.col-lg-4 &ndash;&gt;
+                <div class="col-lg-4">
+                    <img class="img-circle" src="../css_content/img/Beispielbild_orange.jpg"
+                         alt="Generisches Platzhalter-Bild" width="140" height="140">
+                    <h2>Sound 3</h2>
+                    <p>short info</p>
+                    <p><a class="btn btn-default" href="#" role="button">play &raquo;</a></p>
+                </div>&lt;!&ndash; /.col-lg-4 &ndash;&gt;
+            </div>&lt;!&ndash; /.row &ndash;&gt;-->
+        </section>
+    </div>
+</main>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+<!-- Drag & Drop zwischen den Screens -->
+<script src="scripts/tesla-dnd.js"></script>
+
+<!-- Volle Breite für die Karte -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zingtouch/1.0.5/zingtouch.min.js"></script>
+<script src="scripts/tesla-fs-map.js"></script>
+
+<!-- Verschiedene Layouts via Query String -->
+<script src="scripts/tesla-layout-switch.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbgMCVFuIK9EdLUYOUYURk2QLU6Zm5i50&callback=initMap" async
+        defer></script>
+
+</body>
+</html>
